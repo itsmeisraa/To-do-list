@@ -2,60 +2,68 @@ body {
   background: linear-gradient(90deg, #3c4443, #2d4f4c, #194a4a, #012220);
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
-.to-do-list{
- display: block;
- margin-top: 50px;
- 
+
+.to-do-list {
+  width: 500px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
-h1{
-  margin-left: 70px;
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
   color: white;
-  transition-property: transform  ease;
-  transition-duration: 1s;
+  margin-bottom: 20px;
+  transition: transform 1s ease;
 }
-h1:hover{
+
+h1:hover {
   transform: translateY(-20%);
 }
-.inputtask{
-  margin-left: 20px;
+
+.inputtask {
+  width: 70%;
   border-radius: 15px 0px 0px 15px;
-  border-style:none;
-  padding-left: 5px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  border-style: none;
+  padding: 12px 15px;
   background-color: black;
-   color: beige;
-   padding-right: 30px;
-   margin-bottom:  20px;
+  color: beige;
+  margin-bottom: 20px;
 }
-.add-button{
-  border-radius:  0px 15px 15px 0px ;
-  border-style:none;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding-right: 10px;
+
+.inputtask:hover {
+  outline: 1px solid #5C715E;
+}
+
+.add-button {
+  border-radius: 0px 15px 15px 0px;
+  border-style: none;
+  padding: 11px 15px;
   cursor: pointer;
   color: rgb(60, 60, 60);
+  font-size: 16px;
 }
-.add-button:hover{
+
+.add-button:hover {
   color: black;
 }
-.inputtask:hover{
-  border: none;
-}
+
 .list {
   background-color: #5C715E;
   border-radius: 20px;
-  padding: 10px;
+  padding: 15px;
   box-shadow: 10px 10px 10px 5px #011d1b;
   transition: transform 1s ease 100ms;
 }
 
 .list:hover {
-  transform: translateY(10%);
+  transform: translateY(5px);
 }
 
 ol {
@@ -64,44 +72,51 @@ ol {
 }
 
 li {
-  display: flex;                  /* puts text + buttons in one line */
-  justify-content: space-between; /* text left, buttons right */
-  align-items: center;            /* keeps vertical alignment */
-  margin: 8px 0;
-  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 12px 15px;
   background: #011d1b;
   color: white;
   border-radius: 10px;
+  font-size: 1.1rem;
 }
 
 .text {
-  flex: 1;              /* takes all free space */
-  margin-right: 10px;   /* gap before buttons */
-  word-wrap: break-word; /* long words wrap */
+  flex: 1;
+  margin-right: 10px;
+  word-wrap: break-word;
 }
 
 .delete-button,
 .move-button {
-  margin-left: 6px;
+  margin-left: 8px;
   cursor: pointer;
   border: none;
   border-radius: 6px;
-  padding: 5px 10px;
-  font-size: 14px;
-  transition: background 0.3s;
+  padding: 7px 12px;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+  min-width: 45px;
 }
+
 .delete-button {
   background: #ef4444;
   color: white;
 }
+
 .delete-button:hover {
   background: #dc2626;
+  transform: scale(1.1);
 }
 
 .move-button {
   background: #3b82f6;
   color: white;
 }
+
 .move-button:hover {
   background: #2563eb;
+  transform: scale(1.1);
 }
