@@ -120,3 +120,40 @@ li {
   background: #2563eb;
   transform: scale(1.1);
 }
+@media (max-width: 600px) {
+  .to-do-list {
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .inputtask {
+    width: 65%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .add-button {
+    width: 30%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  li {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .delete-button,
+  .move-button {
+    font-size: 13px;
+    padding: 6px 8px;
+    min-width: 35px;
+  }
+}
