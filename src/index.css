@@ -122,38 +122,61 @@ li {
 }
 @media (max-width: 600px) {
   .to-do-list {
-    width: 90%;
-    max-width: 350px;
-    padding: 20px;
+    width: 95%;
+    max-width: 380px;
+    padding: 15px;
   }
 
   h1 {
-    font-size: 1.8rem;
-    margin-left: 0;
+    font-size: 1.6rem;
+    margin: 10px 0;
     text-align: center;
   }
 
+  /* Input + Add button stacked, connected like one block */
   .inputtask {
-    width: 65%;
-    font-size: 14px;
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
   }
 
   .add-button {
-    width: 30%;
-    font-size: 14px;
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
+    margin: 0 0 15px 0;
+    border-radius: 0 0 10px 10px;
+    font-size: 1rem;
   }
 
+  /* Task list */
   li {
-    font-size: 0.95rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1rem;
     padding: 10px;
   }
 
-  .delete-button,
+  .text {
+    flex: 1;
+    margin-bottom: 8px;
+  }
+
+  /* Buttons in task */
+  .delete-button {
+    flex: 1;
+    max-width: 45%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
   .move-button {
-    font-size: 13px;
-    padding: 6px 8px;
-    min-width: 35px;
+    flex: 1;
+    max-width: 25%;
+    margin-left: 5px;
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }
